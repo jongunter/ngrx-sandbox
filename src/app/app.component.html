@@ -1,0 +1,9 @@
+<input #inputNum type="number" value="1">
+
+<button (click)="click$.next(inputNum.value)">Clock</button>
+<app-clock [time]="time | async"></app-clock>
+
+
+<div *ngFor="let person of people | async">
+  {{ person.name }} is in {{ person.time }}
+</div>
